@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>ILOVEGYM</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="navbar">
-      <a href="#home">الصفحة الرئيسية</a>
-      <a href="#news">الأندية</a>
-      <div class="dropdown">
-        <button class="dropbtn">
-          تعليم
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">رابط 1</a>
-          <a href="#">رابط 2</a>
-          <a href="#">رابط 3</a>
+    <!--========== HEADER ==========-->
+    <nav>
+      <div class="navbar">
+        <a href="#home">الصفحة الرئيسية</a>
+        <a href="#news">الأندية</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            تعليم
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">رابط 1</a>
+            <a href="#">رابط 2</a>
+            <a href="#">رابط 3</a>
+          </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">
-          المنتجات
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">رابط 1</a>
-          <a href="#">رابط 2</a>
-          <a href="#">رابط 3</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            المنتجات
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">رابط 1</a>
+            <a href="#">رابط 2</a>
+            <a href="#">رابط 3</a>
+          </div>
         </div>
+        <button id="toggle-button" class="toggle-button">
+          تفعيل وضع الليل
+        </button>
+        <a href="#">
+          <img src="logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
+        </a>
       </div>
-      <button id="toggle-button" class="toggle-button">تفعيل وضع الليل</button>
-      <a href="#">
+    </nav>
+    <!--========== END HEADER ==========-->
+    <!-- /////////////////////////////////////// -->
+    <!--========== HOME ==========-->
+    <div class="carousel-container">
+      <button id="prevBtn" class="carousel-button prev-button btn btn-default btn-lg">السابق</button>
+      <div class="carousel">
+          <div class="slide">
+              <img src="./pic/1.jpg" alt="Image 1">
+          </div>
+          <div class="slide">
+              <img src="./pic/2.jpg" alt="Image 2">
+          </div>
+          <div class="slide">
+              <img src="./pic/3.jpg" alt="Image 3">
+          </div>
+      </div>
+      <button id="nextBtn" class="carousel-button next-button btn btn-default btn-lg">التالي</button>
+  </div>
+  
 
-        <img src="logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
-      </a>
-    </div>
-
-    <script>
-      const toggleButton = document.getElementById("toggle-button");
-      const body = document.body;
-
-      toggleButton.addEventListener("click", () => {
-        if (body.classList.contains("dark")) {
-          body.classList.remove("dark");
-          toggleButton.textContent = "تفعيل وضع الليل";
-        } else {
-          body.classList.add("dark");
-          toggleButton.textContent = "تفعيل وضع النهار";
-        }
-      });
-    </script>
+    
+    <!--========== END HOME ==========-->
+ 
   </body>
+  <script src="app.js"></script>
+  <script src="darkMood.js"></script>
 </html>
