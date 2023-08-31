@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600&display=swap");
+
+:root {
+  --primary-color-day: #f5efe7;
+  --secondary-color-day: #213555;
+  --text-color-day: #d8c4b6;
+  --highlight-color-day: #f5efe7;
+  --dropdown-bg-color-day: #f9f9f9;
+  --hover-bg-color-day: #4f709c;
+  --box-shadow-day: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  --primary-color-night: #03132a;
+  --secondary-color-night: #040d12;
+  --text-color-night: #a5d7e8;
+  --highlight-color-night: #6b8e83;
+  --dropdown-bg-color-night: #222222;
+  --hover-bg-color-night: #576cbc;
+  --box-shadow-night: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: var(--primary-color-day);
+  color: var(--text-color-night);
+  height: 100vh;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: var(--secondary-color-day);
+  display: flex;
+  box-shadow: 0 1px 3px 0 #9b9b9b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 32px;
+  color: var(--text-color-day);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 32px;
+  border: none;
+  outline: none;
+  color: var(--text-color-day);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--hover-bg-color-day);
+  color: var(--primary-color-day);
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-bg-color-day);
+  min-width: 600px;
+  box-shadow: var(--box-shadow-day);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hover-bg-color-day);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dark {
+  background: var(--primary-color-night);
+  color: var(--text-color-night);
+}
+
+.dark .navbar {
+  background-color: var(--secondary-color-night);
+}
+
+.dark .navbar a {
+  color: var(--text-color-night);
+}
+
+.dark .dropdown .dropbtn {
+  color: var(--text-color-night);
+}
+
+.dark .dropdown-content {
+  background-color: var(--dropdown-bg-color-night);
+  box-shadow: var(--box-shadow-night);
+}
+
+/* .dark .dropdown-content a {
+  background-color: var(--hover-bg-color-night);
+} */
+
+.toggle-button {
+  padding: 10px;
+  background-color: var(--secondary-color-day);
+  color: var(--text-color-day);
+  border: none;
+  cursor: pointer;
+}
