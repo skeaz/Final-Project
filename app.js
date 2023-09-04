@@ -1,24 +1,27 @@
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 let autoSlideInterval;
 
 function showSlide(index) {
-    slides[currentSlide].style.display = 'none';
-    slides[index].style.display = 'block';
-    currentSlide = index;
+  slides[currentSlide].style.display = "none";
+  slides[index].style.display = "block";
+  $(".slide").hide(); // أخفي جميع الشرائح
+  $(".slide").eq(index).fadeIn(500); // عرض الشريحة المحددة بانتقال
+
+  currentSlide = index;
 }
 
 function nextSlide() {
-    const newIndex = (currentSlide + 1) % slides.length;
-    showSlide(newIndex);
+  const newIndex = (currentSlide + 1) % slides.length;
+  showSlide(newIndex);
 }
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 3000);
+  autoSlideInterval = setInterval(nextSlide, 5000);
 }
 
 function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
+  clearInterval(autoSlideInterval);
 }
 
 // Show the first slide initially
@@ -28,15 +31,29 @@ showSlide(0);
 startAutoSlide();
 
 // Change slide every 3 seconds
-nextBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    nextSlide();
-    startAutoSlide();
+nextBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  nextSlide();
+  // startAutoSlide();
 });
 
-prevBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    const newIndex = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(newIndex);
-    startAutoSlide();
+prevBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(newIndex);
+  startAutoSlide();
 });
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}

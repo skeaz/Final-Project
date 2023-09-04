@@ -2,20 +2,31 @@
 <html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>ILOVEGYM</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--========== HEADER ==========-->
     <nav>
-      <div class="navbar">
-        <a href="#home">الصفحة الرئيسية</a>
-        <a href="#news">الأندية</a>
-        <div class="dropdown">
+      <div class="navbar" id="navbar">
+        <div class="dropdown" style="display: none">
           <button class="dropbtn">
-            تعليم
-            <i class="fa fa-caret-down"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"
+              />
+            </svg>
           </button>
           <div class="dropdown-content">
             <a href="#">رابط 1</a>
@@ -23,49 +34,188 @@
             <a href="#">رابط 3</a>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            المنتجات
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">رابط 1</a>
-            <a href="#">رابط 2</a>
-            <a href="#">رابط 3</a>
+        <div href="#" class="logo">
+          <img src="./pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
+        </div>
+        <div class="mainNavbar">
+          <div>
+            <a href="#home">الصفحة الرئيسية</a>
+          </div>
+          <a href="#news">الأندية</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              تعليم
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-down-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">رابط 1</a>
+              <a href="#">رابط 2</a>
+              <a href="#">رابط 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              المنتجات
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-down-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                />
+              </svg>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">رابط 1</a>
+              <a href="#">رابط 2</a>
+              <a href="#">رابط 3</a>
+            </div>
           </div>
         </div>
-        <button id="toggle-button" class="toggle-button">
-          تفعيل وضع الليل
+        <div class="darkSinNavbar">
+
+        
+        <div class="login-links">
+          <a href="logIn.html" class="login-link" style="color: #00ffaf"> أنضم الان</a>
+        </div>
+        <button id="toggle-button" class="toggle-button" >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            fill="currentColor"
+            class="bi bi-moon-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+            />
+          </svg>
         </button>
-        <a href="#">
-          <img src="logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
-        </a>
       </div>
     </nav>
     <!--========== END HEADER ==========-->
     <!-- /////////////////////////////////////// -->
     <!--========== HOME ==========-->
     <div class="carousel-container">
-      <button id="prevBtn" class="carousel-button prev-button btn btn-default btn-lg">السابق</button>
       <div class="carousel">
-          <div class="slide">
-              <img src="./pic/1.jpg" alt="Image 1">
-          </div>
-          <div class="slide">
-              <img src="./pic/2.jpg" alt="Image 2">
-          </div>
-          <div class="slide">
-              <img src="./pic/3.jpg" alt="Image 3">
-          </div>
-      </div>
-      <button id="nextBtn" class="carousel-button next-button btn btn-default btn-lg">التالي</button>
-  </div>
-  
+        <button
+          id="prevBtn"
+          class="carousel-button prev-button btn btn-default btn-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-bar-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"
+            />
+          </svg>
+        </button>
+        <div class="slide">
+          <div class="mainContant">
+            <div class="textContant">
+              <h2>استكشف عالم اللياقة والصحة</h2>
+              <p>
+                هل تبحث عن أفضل صالات اللياقة في منطقتك؟ توقف هنا للحصول على
+                معلومات شاملة حول أماكن التمرين واللياقة البدنية المتاحة في
+                مدينتك. سنقدم لك تفاصيل دقيقة حول معدات اللياقة، وأوقات العمل،
+                والأنشطة المقدمة، والأسعار، وتقييمات المستخدمين لمساعدتك في
+                اختيار الصالة الرياضية المثالية لتحقيق أهدافك الصحية والرياضية.
+                انطلق في رحلة اللياقة والصحة معنا اليوم!
+              </p>
+            </div>
 
-    
+            <img
+              class="imgContant"
+              src="./pic/gina-lin-m27OTMegUyA-unsplash.jpg"
+              alt="Image 1"
+            />
+          </div>
+        </div>
+        <div class="slide">
+          <div class="mainContant">
+            <div class="textContant">
+              <h2>استعد لأقصى أداء رياضي</h2>
+              <p>
+                مرحبًا بك في عالم اللياقة والرياضة المثلى! في صفحة منتجاتنا
+                الرياضية في بروتينات، نقدم لك تشكيلة استثنائية من المكملات
+                والبروتينات المصممة خصيصًا لدعم أهدافك الرياضية. سواء كنت تبحث
+                عن زيادة في القوة، أو تحسين في الأداء، أو بناء العضلات، فإننا
+                نضع بين يديك أفضل المنتجات ذات الجودة العالية التي تلبي
+                احتياجاتك. انغمس في هذا العالم وابدأ رحلتك نحو تحقيق أهدافك
+                الرياضية بثقة وقوة.
+              </p>
+            </div>
+
+            <img class="imgContant" src="./pic/2.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="slide">
+          <div class="mainContant">
+            <div class="textContant">
+              <h2>اكتسب المهارات والمعرفة</h2>
+              <p>
+                مرحبًا بك في صفحة التعلم الرياضية حيث يمكنك استكشاف عالم المعرفة
+                وتطوير مهاراتك الرياضية. نحن نؤمن بأهمية التعلم المستمر وتحسين
+                الأداء الرياضي، ولذا قمنا بجمع مجموعة من الموارد التعليمية
+                والنصائح القيمة لمساعدتك في الوصول إلى أقصى إمكانياتك. سواء كنت
+                مبتدئًا أو محترفًا، فإن هذه الصفحة هي المكان المثالي للتعلم
+                والنمو. دعنا نبدأ رحلتك نحو التفوق في عالم الرياضة سويًا!
+              </p>
+            </div>
+
+            <img
+              class="imgContant"
+              src="./pic/nelka-sGIp9xdj7kA-unsplash.jpg"
+              alt="Image 1"
+            />
+          </div>
+        </div>
+        <button
+          id="nextBtn"
+          class="carousel-button next-button btn btn-default btn-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-bar-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <!--========== END HOME ==========-->
- 
   </body>
   <script src="app.js"></script>
   <script src="darkMood.js"></script>
+  <script src="logIn.js"></script>
 </html>
