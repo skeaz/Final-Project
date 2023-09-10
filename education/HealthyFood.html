@@ -7,7 +7,30 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>ILOVEGYM</title>
-     <link rel="stylesheet" href="./style.css" />
+     <link rel="stylesheet" href="../style.css" />
+     <style>
+      .card22 {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+      }
+      
+      .card22:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      .container22 {
+        padding: 2px 16px;
+      }
+      .allCard{
+        display: flex;
+      }
+      .card22 img {
+    width: 492px;
+    height: 328px;
+    padding: 10px;
+}
+      </style>
   </head>
   <body>
     <!--========== HEADER ==========-->
@@ -51,7 +74,7 @@
             </button>
             <div class="dropdown-content">
               <a href="#">دورات التدريب الشخصي </a>
-              <a href="./education/HealthyFood.html">الاكل الصحي </a>
+              <a href="#">الاكل الصحي </a>
               <a href="#">اسماء الادوات الرياضية </a>
             </div>
           </div>
@@ -103,122 +126,31 @@
     <!--========== END HEADER ==========-->
     <!-- /////////////////////////////////////// -->
     <!--========== HOME ==========-->
-    <div class="carousel-container">
-      <div class="carousel" id="carousel">
-        <button
-          id="prevBtn"
-          class="carousel-button prev-button btn btn-default btn-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"
-            />
-          </svg>
-        </button>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>استكشف عالم اللياقة والصحة</h2>
-              <p>
-                هل تبحث عن أفضل صالات اللياقة في منطقتك؟ توقف هنا للحصول على
-                معلومات شاملة حول أماكن التمرين واللياقة البدنية المتاحة في
-                مدينتك. سنقدم لك تفاصيل دقيقة حول معدات اللياقة، وأوقات العمل،
-              ة والصحة معنا اليوم!
-              </p>
-            </div>
-
-            <img
-              class="imgContant"
-              src="./pic/gina-lin-m27OTMegUyA-unsplash.jpg"
-              alt="Image 1"
-            />
-          </div>
-        </div>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>استعد لأقصى أداء رياضي</h2>
-              <p>
-                مرحبًا بك في عالم اللياقة والرياضة المثلى! في صفحة منتجاتنا
-                الرياضية في بروتينات، نقدم لك تشكيل     احتياجاتك. انغمس في هذا العالم وابدأ رحلتك نحو تحقيق أهدافك
-                الرياضية بثقة وقوة.
-              </p>
-            </div>
-
-            <img class="imgContant" src="./pic/2.jpg" alt="Image 1" />
-          </div>
-        </div>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>اكتسب المهارات والمعرفة</h2>
-              <p>
-                مرحبًا بك في صفحة التعلم الرياضية حيث يمكنك استكشاف عالم المعرفة
-                وتطوير مهاراتك الرياضية. نحن نؤمن بأهمية التعلم المستمر وتحسين
-                الأداء الرياضي، ولذا قمنا بجمع مجموعة  والنمو. دعنا نبدأ رحلتك نحو التفوق في عالم الرياضة سويًا!
-              </p>
-            </div>
-
-            <img
-              class="imgContant"
-              src="./pic/nelka-sGIp9xdj7kA-unsplash.jpg"
-              alt="Image 1"
-            />
-          </div>
-        </div>
-        <button
-          id="nextBtn"
-          class="carousel-button next-button btn btn-default btn-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
     <div class="allCard">
 
     
-      <div class="card22">
-        <img src="../pic/food1.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الفطور</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-      <div class="card22">
-        <img src="../pic/food2.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الغداء</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-      <div class="card22">
-        <img src="../pic/food3.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>العشاء</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
+    <div class="card22">
+      <img src="../pic/food1.jpg" alt="Avatar" >
+      <div class="container22">
+        <h4><b>الفطور</b></h4> 
+        <p>Architect & Engineer</p> 
       </div>
     </div>
+    <div class="card22">
+      <img src="../pic/food2.jpg" alt="Avatar" >
+      <div class="container22">
+        <h4><b>الغداء</b></h4> 
+        <p>Architect & Engineer</p> 
+      </div>
+    </div>
+    <div class="card22">
+      <img src="../pic/food3.jpg" alt="Avatar" >
+      <div class="container22">
+        <h4><b>العشاء</b></h4> 
+        <p>Architect & Engineer</p> 
+      </div>
+    </div>
+  </div>
     <!--========== END HOME ==========-->
     <!--========== FOOTER ==========-->
     <footer class="footer">
@@ -276,7 +208,7 @@
     
     <!--========== END FOOTER ==========-->
   </body>
-  <script src="app.js"></script>
-  <script src="darkMood.js"></script>
+  <script src="../app.js"></script>
+  <script src="../darkMood.js"></script>
   <script src="logIn.js"></script>
 </html>

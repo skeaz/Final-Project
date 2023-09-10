@@ -7,32 +7,33 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>ILOVEGYM</title>
-     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    
   </head>
   <body>
     <!--========== HEADER ==========-->
-    <nav>
-      <div class="navbar " id="navbar">
+    <nav dir="rtl">
+      <div class="navbar" id="navbar">
         <div class="dropdown"  id="nav__menu">
-          <button class="dropbtn" id="dropbtn">
+          <button class="dropbtn">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
           </button>
-          <div class="dropdown-content2" id="dropdown-content2">
+          <div class="dropdown-content">
             <a href="#">رابط 1</a>
             <a href="#">رابط 2</a>
             <a href="#">رابط 3</a>
           </div>
         </div>
         <div href="#" class="logo">
-          <img src="./pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
+          <img src="../pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
         </div>
         <div class="mainNavbar">
           <div>
-            <a href="#home">الصفحة الرئيسية</a>
+            <a href="../index.html">الصفحة الرئيسية</a>
           </div>
-          <a href="./clubs/club.html">الأندية</a>
+          <a href="#news">الأندية</a>
           <div class="dropdown">
             <button class="dropbtn">
               تعليم
@@ -50,14 +51,14 @@
               </svg>
             </button>
             <div class="dropdown-content">
-              <a href="#">دورات التدريب الشخصي </a>
-              <a href="./education/HealthyFood.html">الاكل الصحي </a>
-              <a href="#">اسماء الادوات الرياضية </a>
+              <a href="#">رابط 1</a>
+              <a href="#">رابط 2</a>
+              <a href="#">رابط 3</a>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">
-              <a href="./product/product.html">المنتجات</a>
+              المنتجات
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -82,7 +83,7 @@
 
         
         <div class="login-links">
-          <a href="./subscribe/logIn.html" class="login-link" style="color: #00ffaf"> أنضم الان</a>
+          <a href="#" class="login-link" style="color: #00ffaf"> أنضم الان</a>
         </div>
         <button id="toggle-button" class="toggle-button" >
           <svg
@@ -103,122 +104,44 @@
     <!--========== END HEADER ==========-->
     <!-- /////////////////////////////////////// -->
     <!--========== HOME ==========-->
-    <div class="carousel-container">
-      <div class="carousel" id="carousel">
-        <button
-          id="prevBtn"
-          class="carousel-button prev-button btn btn-default btn-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"
-            />
-          </svg>
-        </button>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>استكشف عالم اللياقة والصحة</h2>
-              <p>
-                هل تبحث عن أفضل صالات اللياقة في منطقتك؟ توقف هنا للحصول على
-                معلومات شاملة حول أماكن التمرين واللياقة البدنية المتاحة في
-                مدينتك. سنقدم لك تفاصيل دقيقة حول معدات اللياقة، وأوقات العمل،
-              ة والصحة معنا اليوم!
-              </p>
-            </div>
+    <h1>إضافة معلومات نادي رياضي</h1>
+    <form id="clubForm">
+        <label for="clubName">اسم النادي:</label>
+        <input type="text" id="clubName" name="clubName"><br><br>
 
-            <img
-              class="imgContant"
-              src="./pic/gina-lin-m27OTMegUyA-unsplash.jpg"
-              alt="Image 1"
-            />
-          </div>
-        </div>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>استعد لأقصى أداء رياضي</h2>
-              <p>
-                مرحبًا بك في عالم اللياقة والرياضة المثلى! في صفحة منتجاتنا
-                الرياضية في بروتينات، نقدم لك تشكيل     احتياجاتك. انغمس في هذا العالم وابدأ رحلتك نحو تحقيق أهدافك
-                الرياضية بثقة وقوة.
-              </p>
-            </div>
+        <label for="clubLocation">موقع النادي:</label>
+        <input type="text" id="clubLocation" name="clubLocation"><br><br>
 
-            <img class="imgContant" src="./pic/2.jpg" alt="Image 1" />
-          </div>
-        </div>
-        <div class="slide">
-          <div class="mainContant">
-            <div class="textContant">
-              <h2>اكتسب المهارات والمعرفة</h2>
-              <p>
-                مرحبًا بك في صفحة التعلم الرياضية حيث يمكنك استكشاف عالم المعرفة
-                وتطوير مهاراتك الرياضية. نحن نؤمن بأهمية التعلم المستمر وتحسين
-                الأداء الرياضي، ولذا قمنا بجمع مجموعة  والنمو. دعنا نبدأ رحلتك نحو التفوق في عالم الرياضة سويًا!
-              </p>
-            </div>
+        <label for="clubImage">صورة النادي:</label>
+        <input type="file" id="clubImage" name="clubImage"><br><br>
 
-            <img
-              class="imgContant"
-              src="./pic/nelka-sGIp9xdj7kA-unsplash.jpg"
-              alt="Image 1"
-            />
-          </div>
-        </div>
-        <button
-          id="nextBtn"
-          class="carousel-button next-button btn btn-default btn-lg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="allCard">
+        <label for="subscriptionPrice">سعر الاشتراك:</label>
+        <input type="number" id="subscriptionPrice" name="subscriptionPrice"><br><br>
 
-    
-      <div class="card22">
-        <img src="../pic/food1.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الفطور</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-      <div class="card22">
-        <img src="../pic/food2.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الغداء</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-      <div class="card22">
-        <img src="../pic/food3.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>العشاء</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-    </div>
+        <label for="captainName">كابتن القاعة:</label>
+        <input type="text" id="captainName" name="captainName"><br><br>
+
+        <label for="workingHours">أوقات العمل:</label>
+        <input type="text" id="workingHours" name="workingHours"><br><br>
+
+        <label for="gender">رجال فقط أو مختلط:</label>
+        <input type="radio" id="male" name="gender" value="رجال فقط">
+        <label for="male">رجال فقط</label>
+        <input type="radio" id="mixed" name="gender" value="مختلط">
+        <label for="mixed">مختلط</label><br><br>
+
+        <label for="rating">تقييم النادي:</label>
+        <input type="number" id="rating" name="rating"><br><br>
+
+        <label for="clubFeatures">ميزات النادي:</label>
+        <textarea id="clubFeatures" name="clubFeatures" rows="4" cols="50"></textarea><br><br>
+
+        <label for="clubCapacity">حجم النادي (عدد الأشخاص القصوى):</label>
+        <input type="number" id="clubCapacity" name="clubCapacity"><br><br>
+
+        <button type="submit">إضافة النادي</button>
+    </form>
+
     <!--========== END HOME ==========-->
     <!--========== FOOTER ==========-->
     <footer class="footer">
@@ -231,7 +154,7 @@
               <li><a href="../actorIndex/actor.html" style="color: #00ffaf;">أنضم الان</a></li>
               <li><a href="../aboutIndex/About.html" target="_blank">الأندية</a></li>
               <li><a href="#bookmarked">تعليم</a></li>
-              <li><a href="./product/product.html">المنتجات</a></li>
+              <li><a href="#bookmarked">المنتجات</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -276,7 +199,7 @@
     
     <!--========== END FOOTER ==========-->
   </body>
-  <script src="app.js"></script>
-  <script src="darkMood.js"></script>
-  <script src="logIn.js"></script>
+  <script src="../app.js"></script>
+  <script src="../darkMood.js"></script>
+  <script src="./logIn.js"></script>
 </html>
