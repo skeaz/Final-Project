@@ -29,10 +29,10 @@
           <img src="./pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
         </div>
         <div class="mainNavbar">
-          <div>
+          
             <a href="#home">الصفحة الرئيسية</a>
-          </div>
           <a href="./clubs/club.html">الأندية</a>
+          <a href="./product/product.html">المنتجات</a>
           <div class="dropdown">
             <button class="dropbtn">
               تعليم
@@ -55,28 +55,7 @@
               <a href="#">اسماء الادوات الرياضية </a>
             </div>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">
-              <a href="./product/product.html">المنتجات</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-caret-down-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
-                />
-              </svg>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">رابط 1</a>
-              <a href="#">رابط 2</a>
-              <a href="#">رابط 3</a>
-            </div>
-          </div>
+         
         </div>
         <div class="darkSinNavbar">
 
@@ -109,19 +88,7 @@
           id="prevBtn"
           class="carousel-button prev-button btn btn-default btn-lg"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"
-            />
-          </svg>
+        
         </button>
         <div class="slide">
           <div class="mainContant">
@@ -178,19 +145,7 @@
           id="nextBtn"
           class="carousel-button next-button btn btn-default btn-lg"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-bar-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"
-            />
-          </svg>
+          
         </button>
       </div>
     </div>
@@ -201,23 +156,42 @@
         <img src="../pic/food1.jpg" alt="Avatar" >
         <div class="container22">
           <h4><b>الفطور</b></h4> 
-          <p>Architect & Engineer</p> 
         </div>
       </div>
       <div class="card22">
         <img src="../pic/food2.jpg" alt="Avatar" >
         <div class="container22">
           <h4><b>الغداء</b></h4> 
-          <p>Architect & Engineer</p> 
         </div>
       </div>
       <div class="card22">
         <img src="../pic/food3.jpg" alt="Avatar" >
         <div class="container22">
           <h4><b>العشاء</b></h4> 
-          <p>Architect & Engineer</p> 
         </div>
       </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:50px">استكشف عالم اللياقة والصحة</h1>
+        <p>أبحث عن أقرب نادي لك</p>
+        <a href="./clubs/club.html">
+        <button>بحث</button></a>
+      </div></div>
+      <div class="newsletter-form">
+        <h2>الاشتراك في النشرة الإخبارية</h2>
+        <form  method="POST" onsubmit="showPopup(event)">
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+            <button type="submit">اشترك</button>
+            <br>
+            <p style="font-size: small;">أوافق على تلقي آخر الأخبار من ILOVEGYM.</p>
+        </form>
+    </div>
+
+    <!-- Custom pop-up message -->
+    <div class="popup" id="popup">
+        <p>تم الاشتراك بنجاح!</p>
     </div>
     <!--========== END HOME ==========-->
     <!--========== FOOTER ==========-->
@@ -276,6 +250,24 @@
     
     <!--========== END FOOTER ==========-->
   </body>
+  <script>
+        function showPopup(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Show the custom pop-up
+            const popup = document.getElementById("popup");
+            const email = document.getElementById("email");
+            popup.style.display = "flex";
+
+            // You can also add additional styling or animations to the pop-up here
+
+            // Optionally, you can submit the form programmatically after a delay
+            setTimeout(function () {
+              popup.style.display = "none";
+              email.value = ""
+            }, 2000); // Submit after 2 seconds (adjust the delay as needed)
+        }
+</script>
   <script src="app.js"></script>
   <script src="darkMood.js"></script>
   <script src="logIn.js"></script>

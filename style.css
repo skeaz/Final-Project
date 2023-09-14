@@ -8,6 +8,7 @@
   --dropdown-bg-color-day: #f9f9f9;
   --hover-bg-color-day: #4f709c;
   --box-shadow-day: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  --new-color : #554121;
 
   --primary-color-night: #03132a;
   --secondary-color-night: #040d12;
@@ -24,6 +25,20 @@
   scroll-behavior: auto;
 }
 
+@media (max-width: 450px) {
+  html {
+    font-size: 75% !important;
+  }
+  .hero-image{
+    background-position: -934px -17px !important;
+  }
+  .allCard {
+   
+    padding: 13px !important;}
+    .textContant {
+     
+      font-size: 90% !important;}
+}
 body {
   font-family: "Cairo", sans-serif;
   background: var(--primary-color-day);
@@ -47,7 +62,8 @@ body {
 }
 .logo img {
   width: 151px !important;
-  padding: 15px;
+  /* padding: 15px; */
+  margin-right: 45px;
 }
 .navbar a {
   font-size: 16px;
@@ -75,10 +91,9 @@ body {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   color: var(--text-color-night);
-  display: flex;
-  transition: 0.2s ease-in-out;
-  justify-content: center;
-  align-items: center;
+}
+.dropbtn:hover svg {
+  transform: rotate(180deg);
 }
 .mainNavbar {
   display: flex;
@@ -198,9 +213,10 @@ body {
   /* height: 99px; */
   background-image: linear-gradient(
     to top,
-    var(--hover-bg-color-day),
+    var(--text-color-day),
     transparent
   );
+
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -212,7 +228,7 @@ body {
   );
 }
 .slide img {
-  width: 50%;
+  width: 40%;
   border-radius: 10px;
 }
 .mainContant {
@@ -238,7 +254,7 @@ body {
 }
 .carousel-container {
   position: relative;
-  margin: 10px;
+  margin: 32px;
 }
 
 .carousel-button {
@@ -638,15 +654,35 @@ body {
   .textContant p {
     display: none;
   }
-  .slide img {
-    width: 100%;
-  }
+
   .original-site {
     margin-bottom: 76px;
     bottom: 0;
     position: relative;
   }
+  .carousel-container {
+    margin: 10px;
+}
   /* You can also add additional styles for the nav__menu here */
+  .hero-text h1 {
+    font-size: 25px !important;
+  }
+  .allCard {
+    gap: 9px !important;
+    font-size: 15px;
+  }
+  .slide img {
+    width: 315px !important;
+  }
+  .footer {
+    padding: 29px;
+  }
+  .footer-links a {
+    font-size: 15px;
+  }
+  .footer-content h3 {
+    font-size: 20px;
+  }
 }
 @media (max-width: 900px) {
   .logo img {
@@ -669,6 +705,7 @@ body {
   background-position: -9px -25px;
   background-size: 1525px;
   border-radius: 10px;
+  border: solid;
 }
 
 .hero-text {
@@ -680,11 +717,19 @@ body {
   color: white;
   gap: 43px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: stretch;
+}
+.hero-text p {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+.hero-text h1 {
+  border-bottom: 3px solid #661919;
 }
 
 .hero-text button {
@@ -693,9 +738,10 @@ body {
   display: inline-block;
   padding: 10px 25px;
   color: white;
-  background-color: tomato;
+  background-color: #661919;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .hero-text button:hover {
@@ -713,14 +759,14 @@ body {
 
 @media (min-width: 500px) {
   .card-grid {
-/*     grid-template-columns: 1fr 1fr; */
+    /*     grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
   .card-grid {
-/*     grid-template-columns: 1fr 1fr 1fr; */
+    /*     grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -729,6 +775,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
@@ -740,17 +788,24 @@ body {
 }
 
 .card-header h1 {
-  margin: 0;  
+  margin: 0;
 }
 
 .card-content {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
-
+.special {
+  color: #00c385;
+}
 .card-footer {
-  background-color: #aaa
+  background-color: #aaa;
 }
-.dark .card-footer{
+.dark .card-footer {
   background-color: var(--highlight-color-night);
 }
 .card-footer-nav {
@@ -758,7 +813,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 /* You can also use CSS Grid for the footer nav */
@@ -775,28 +830,149 @@ body {
   color: white;
   padding: 1rem;
 }
-.card-footer-item:hover ,.card-footer-nav:hover,.card-footer-nav:hover li{
+.zmdi-favorite:hover {
   color: tomato;
   cursor: pointer;
 }
-.card22 {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
+.zmdi-pin:hover {
+  color: #00c385;
+  cursor: pointer;
 }
-
+.card22 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to top,
+    var(--new-color),
+    transparent
+  );
+  color: var(--text-color-day);
+}
+.dark .card22 {
+  background-image: linear-gradient(
+    to top,
+    var(--secondary-color-day),
+    transparent
+  );
+}
 .card22:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(63, 153, 205, 0.2);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .container22 {
-  padding: 2px 16px;
+  padding: 20px 16px;
 }
-.allCard{
+.allCard {
   display: flex;
+  justify-content: space-between;
+  padding: 31px;
+  gap: 75px;
 }
 .card22 img {
-width: 492px;
-height: 328px;
-padding: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 23px;
+}
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+/* Style the dropdown */
+.categoryDropdown {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.categoryDropdown:hover {
+  background-color: #ddd;
+}
+.newsletter-form {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
+    height: 261px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  
+}
+.dark .newsletter-form{
+  background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
+
+}
+/* CSS styles for form elements */
+.newsletter-form label,
+.newsletter-form input,
+.newsletter-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.newsletter-form label {
+  font-weight: bold;
+}
+
+.newsletter-form input[type="email"] {
+ 
+  width: 286px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+
+}
+
+.newsletter-form button[type="submit"] {
+  background-color: #00c385;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  background-color: #005ab3;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-color-day);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  width: 318px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  
+  justify-content: center;
+  color: var(--text-color-day);
 }
