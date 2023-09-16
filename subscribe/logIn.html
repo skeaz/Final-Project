@@ -12,95 +12,57 @@
   </head>
   <body>
     <!--========== HEADER ==========-->
-    <nav dir="rtl">
-      <div class="navbar" id="navbar">
-        <div class="dropdown"  id="nav__menu">
-          <button class="dropbtn">
+    <nav>
+      <div class="navbar " id="navbar">
+        <div class="dropdown" id="nav__menu">
+          <button class="dropbtn" id="dropbtn">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
             </svg>
           </button>
-          <div class="dropdown-content">
-            <a href="#">رابط 1</a>
-            <a href="#">رابط 2</a>
-            <a href="#">رابط 3</a>
+          <div class="dropdown-content2" id="dropdown-content2">
+            <a href="../index.html">الصفحة الرئيسية
+            </a>              <a href="../clubs/club.html"> الأندية</a>
+              <a href="../product/product.html">  المنتجات </a>
+              <a href="../education/HealthyFood.html">  تعليم </a>
           </div>
         </div>
         <div href="#" class="logo">
-          <img src="../pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="" />
+          <img src="../pic/logo2.OErxVLmRnFwXs1M3EMoAJtlikugvZq9PU___" alt="">
         </div>
         <div class="mainNavbar">
-          <div>
+          
             <a href="../index.html">الصفحة الرئيسية</a>
-          </div>
-          <a href="#news">الأندية</a>
+          <a href="./clubs/club.html">الأندية</a>
+          <a href="./product/product.html">المنتجات</a>
           <div class="dropdown">
             <button class="dropbtn">
               تعليم
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-caret-down-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path>
               </svg>
             </button>
             <div class="dropdown-content">
-              <a href="#">رابط 1</a>
-              <a href="#">رابط 2</a>
-              <a href="#">رابط 3</a>
+              <a href="#">دورات التدريب الشخصي </a>
+              <a href="./education/HealthyFood.html">الاكل الصحي </a>
+              <a href="#">اسماء الادوات الرياضية </a>
             </div>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">
-              المنتجات
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-caret-down-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
-                />
-              </svg>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">رابط 1</a>
-              <a href="#">رابط 2</a>
-              <a href="#">رابط 3</a>
-            </div>
-          </div>
+         
         </div>
         <div class="darkSinNavbar">
 
         
         <div class="login-links">
-          <a href="#" class="login-link" style="color: #00ffaf"> أنضم الان</a>
+          <a href="./subscribe/logIn.html" class="login-link" style="color: #00ffaf"> أنضم الان</a>
         </div>
-        <button id="toggle-button" class="toggle-button" >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="23"
-            height="23"
-            fill="currentColor"
-            class="bi bi-moon-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-            />
+        <button id="toggle-button" class="toggle-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
           </svg>
         </button>
       </div>
-    </nav>
+    </div></nav>
     <!--========== END HEADER ==========-->
     <!-- /////////////////////////////////////// -->
     <!--========== HOME ==========-->
