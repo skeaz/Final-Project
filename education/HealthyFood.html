@@ -8,7 +8,23 @@
 
     <title>ILOVEGYM</title>
      <link rel="stylesheet" href="../style.css" />
+    <style>
+       .main2 {
+
+            display: flex;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            gap: 46px;
+        }
+        .main2 img {
+          width: 50%;
+        }
     
+
+    </style>
   </head>
   <body>
     <!--========== HEADER ==========-->
@@ -21,9 +37,10 @@
             </svg>
           </button>
           <div class="dropdown-content2" id="dropdown-content2">
-            <a href="#">رابط 1</a>
-            <a href="#">رابط 2</a>
-            <a href="#">رابط 3</a>
+            <a href="../index.html">الصفحة الرئيسية
+            </a>              <a href="../clubs/club.html"> الأندية</a>
+              <a href="../product/product.html">  المنتجات </a>
+              <a href="../education/HealthyFood.html">  تعليم </a>
           </div>
         </div>
         <div href="#" class="logo">
@@ -66,30 +83,53 @@
     <!-- /////////////////////////////////////// -->
     <!--========== HOME ==========-->
     <div class="allCard">
-
-    
-    <div class="card22">
-      <img src="../pic/food1.jpg" alt="Avatar" >
-      <div class="container22">
-        <h4><b>الفطور</b></h4> 
-        <p>Architect & Engineer</p> 
+      <div class="card22" onclick="openPage('breakfast.html')">
+          <img src="../pic/food1.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>الفطور</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-    </div>
-    <div class="card22">
-      <img src="../pic/food2.jpg" alt="Avatar" >
-      <div class="container22">
-        <h4><b>الغداء</b></h4> 
-        <p>Architect & Engineer</p> 
+      <div class="card22" onclick="openPage('lunch.html')">
+          <img src="../pic/food2.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>الغداء</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-    </div>
-    <div class="card22">
-      <img src="../pic/food3.jpg" alt="Avatar" >
-      <div class="container22">
-        <h4><b>العشاء</b></h4> 
-        <p>Architect & Engineer</p> 
+      <div class="card22" onclick="openPage('dinner.html')">
+          <img src="../pic/food3.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>العشاء</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-    </div>
   </div>
+  <div class="main2">
+    
+    <section class="food-sub">
+      <img src="../pic/Oat porridge.jpg" alt="عصيدة الشوفان">
+      <h2>عصيدة الشوفان</h2></section>
+      <section class="food-sub">
+        <img src="../pic/food1.jpg" alt="البيض">
+        <h2>البيض</h2></section>
+        <section class="food-sub">
+          <img src="../pic/soup.jpg" alt="حساء">
+          <h2>حساء</h2></section>
+          
+
+        </div>
+          <br>
+          <div class="main2">
+          <section class="food-sub">
+            <img src="../pic/sandwich.jpg" alt="ساندويتش">
+            <h2>ساندويتش</h2></section>
+            <section class="food-sub">
+              <img src="../pic/Meat roll.jpg" alt="لفافة">
+              <h2>لفافة اللحم</h2></section>
+              <section class="food-sub">
+                <img src="../pic/Chicken salad.jpg" alt="سلطة">
+                <h2>سلطة الدجاج</h2></section></div>
     <!--========== END HOME ==========-->
     <!--========== FOOTER ==========-->
     <footer class="footer">
@@ -147,7 +187,12 @@
     
     <!--========== END FOOTER ==========-->
   </body>
+  <script>
+   
+</script>
   <script src="../app.js"></script>
   <script src="../darkMood.js"></script>
   <script src="logIn.js"></script>
+  <script src="../dropbtn.js"></script>
+
 </html>

@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: auto;
+  text-decoration: none;
 }
 
 @media (max-width: 450px) {
@@ -636,7 +637,14 @@ body {
   .logo {
     display: none;
   }
-
+ 
+    .main2{
+      gap: 0px !important;
+      padding: 5px !important;
+    }
+    .dark .food-sub h2{
+      font-size: 15px !important;
+    }
   /* Show the nav__menu when the screen is less than 768px */
   #nav__menu {
     display: block;
@@ -696,7 +704,7 @@ body {
   }
 }
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient( rgba(37, 36, 36, 0.5), rgba(37, 36, 36, 0.5)),
     url("./pic/MapChart_Map.png");
   height: 357px;
   position: relative;
@@ -707,7 +715,10 @@ body {
   border-radius: 10px;
   border: solid;
 }
-
+.dark .hero-image{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./pic/MapChart_Map.png");
+}
 .hero-text {
   text-align: center;
   position: absolute;
@@ -778,13 +789,17 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.card:hover{
+  transform: scale(1.03);
+  cursor: pointer;
+}
 .card-header {
   background-color: var(--secondary-color-day);
   padding: 1rem;
   color: var(--text-color-day);
   text-align: center;
-  padding: 10px;
+  
+  font-size: 10px;
 }
 
 .card-header h1 {
@@ -799,11 +814,20 @@ body {
   justify-content: center;
   gap: 10px;
 }
+.dark .card-content a {
+  color: #00c385;
+}
 .special {
   color: #00c385;
 }
 .card-footer {
   background-color: #aaa;
+}
+.dark .card-footer a {
+  color: var(--primary-color-night);
+}
+.dark .card-footer a:hover {
+  color: #00c385;
 }
 .dark .card-footer {
   background-color: var(--highlight-color-night);
@@ -830,10 +854,7 @@ body {
   color: white;
   padding: 1rem;
 }
-.zmdi-favorite:hover {
-  color: tomato;
-  cursor: pointer;
-}
+
 .zmdi-pin:hover {
   color: #00c385;
   cursor: pointer;
@@ -889,7 +910,11 @@ body {
 .show {
   display: flex;
 }
+.containerClub{
+  display: flex;
+  justify-content: center;
 
+}
 /* Style the dropdown */
 .categoryDropdown {
   border: none;
@@ -897,6 +922,9 @@ body {
   padding: 12px 16px;
   background-color: #f1f1f1;
   cursor: pointer;
+  width: 243px;
+  text-align: center;
+
 }
 
 .categoryDropdown:hover {
@@ -975,4 +1003,69 @@ body {
   
   justify-content: center;
   color: var(--text-color-day);
+}
+.breakfast-item {
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dark .breakfast-item {
+  background-color: var(--secondary-color-day);
+}
+.dark .breakfast-item h2{
+  color: var(--text-color-day);
+}
+.lunch-item{
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dark .lunch-item {
+  background-color: var(--secondary-color-day);
+}
+.dark .lunch-item h2{
+  color: var(--text-color-day);
+}
+.dinner-item{
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dark .dinner-item {
+  background-color: var(--secondary-color-day);
+}
+.dark .dinner-item h2{
+  color: var(--text-color-day);
+}
+.food-sub{
+  
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.food-sub img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.dark .food-sub {
+  background-color: var(--secondary-color-day);
+}
+.dark .food-sub h2{
+  color: var(--text-color-day);
+}
+.food-sub img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }

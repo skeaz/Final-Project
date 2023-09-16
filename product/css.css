@@ -69,7 +69,7 @@ body {
 }
 
 .productsContainer .products-productsContainer .product img {
-  height: 25rem;
+  height: 20rem;
   border-radius: 15px;
 }
 
@@ -130,6 +130,7 @@ body {
 
 .products-preview .preview img {
   height: 21rem;
+  max-height: 170px;
 }
 
 .products-preview .preview .fa-times {
@@ -148,7 +149,7 @@ body {
 .products-preview .preview h3 {
   color: #444;
   padding: 0.5rem 0;
-  font-size: 2.5rem;
+  font-size: 20px;
 }
 
 .products-preview .preview .stars {
@@ -179,9 +180,9 @@ body {
 
 .products-preview .preview .buttons {
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
+  gap: 15.5rem;
+  margin-top: 0rem;
+  width: 418px;
 }
 
 .products-preview .preview .buttons a {
@@ -225,5 +226,9 @@ body {
   .productsContainer {
    margin: 0 auto;
    padding: 3rem 6px;
+}
+.products-preview .preview .buttons{
+  width: 316px;
+       gap: 0rem;
 }
 }

@@ -20,9 +20,11 @@
             </svg>
           </button>
           <div class="dropdown-content2" id="dropdown-content2">
-            <a href="#">رابط 1</a>
-            <a href="#">رابط 2</a>
-            <a href="#">رابط 3</a>
+            <a href="./index.html">الصفحة الرئيسية
+            </a>
+              <a href="../clubs/club.html"> الأندية</a>
+              <a href="../product/product.html">  المنتجات </a>
+              <a href="../education/HealthyFood.html">  تعليم </a>
           </div>
         </div>
         <div href="#" class="logo">
@@ -150,27 +152,28 @@
       </div>
     </div>
     <div class="allCard">
-
-    
-      <div class="card22">
-        <img src="../pic/food1.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الفطور</b></h4> 
-        </div>
+      <div class="card22" onclick="openPage('./education/breakfast.html')">
+          <img src="../pic/food1.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>الفطور</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-      <div class="card22">
-        <img src="../pic/food2.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>الغداء</b></h4> 
-        </div>
+      <div class="card22" onclick="openPage('./education/lunch.html')">
+          <img src="../pic/food2.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>الغداء</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-      <div class="card22">
-        <img src="../pic/food3.jpg" alt="Avatar" >
-        <div class="container22">
-          <h4><b>العشاء</b></h4> 
-        </div>
+      <div class="card22" onclick="openPage('./education/dinner.html')">
+          <img src="../pic/food3.jpg" alt="Avatar">
+          <div class="container22">
+              <h4><b>العشاء</b></h4> 
+              <p>Architect & Engineer</p> 
+          </div>
       </div>
-    </div>
+  </div>
     <div class="hero-image">
       <div class="hero-text">
         <h1 style="font-size:50px">استكشف عالم اللياقة والصحة</h1>
@@ -271,4 +274,6 @@
   <script src="app.js"></script>
   <script src="darkMood.js"></script>
   <script src="logIn.js"></script>
+  <script src="./dropbtn.js"></script>
+
 </html>
