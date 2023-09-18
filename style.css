@@ -1069,3 +1069,10 @@ body {
   transform: scale(1.1);
   cursor: pointer;
 }
+.dark .card-dark{
+  background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
+
+}
+.dark .gap-5 a{
+  color: aquamarine;
+}

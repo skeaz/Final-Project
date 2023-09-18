@@ -349,7 +349,10 @@ img,video {
 }
 
 .gap-5 {
-    gap: 1.25rem
+    gap: 1.25rem;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .gap-6 {
@@ -646,7 +649,9 @@ img,video {
 }
 
 .uppercase {
-    text-transform: uppercase
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
 }
 
 .italic {
@@ -691,7 +696,7 @@ img,video {
 }
 
 .text-gray-500 {
-    --tw-text-opacity: 1;
+    
     color: rgb(107 114 128 / var(--tw-text-opacity))
 }
 
