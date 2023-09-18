@@ -1071,7 +1071,7 @@ body {
 }
 .dark .card-dark{
   background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
-
+  color: var(--text-color-day);
 }
 .dark .gap-5 a{
   color: aquamarine;
