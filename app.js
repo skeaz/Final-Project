@@ -35,7 +35,7 @@ startAutoSlide();
 nextBtn.addEventListener("click", () => {
   stopAutoSlide();
   nextSlide();
-  // startAutoSlide();
+  startAutoSlide();
 });
 
 prevBtn.addEventListener("click", () => {

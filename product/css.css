@@ -53,16 +53,15 @@ body {
   outline-offset: -1.5rem;
   cursor: pointer;
   border-radius: 10px;
+  margin: 10px;
 }
 .dark .productsContainer .products-productsContainer .product {
-  background-image: linear-gradient(
-    to top,
-    var(--secondary-color-day),
-    transparent
-  );
+  background: var(--secondary-color-day);
   color: var(--text-color-day);
 }
-
+.dark .productsContainer .products-productsContainer .product h3{
+  color: var(--text-color-night);
+}
 .productsContainer .products-productsContainer .product:hover {
   outline: 0.2rem solid #222;
   outline-offset: 0;

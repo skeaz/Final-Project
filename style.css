@@ -8,7 +8,7 @@
   --dropdown-bg-color-day: #f9f9f9;
   --hover-bg-color-day: #4f709c;
   --box-shadow-day: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  --new-color : #554121;
+  --new-color: #554121;
 
   --primary-color-night: #03132a;
   --secondary-color-night: #040d12;
@@ -30,15 +30,16 @@
   html {
     font-size: 75% !important;
   }
-  .hero-image{
+  .hero-image {
+    height: 244px !important;
     background-position: -934px -17px !important;
   }
   .allCard {
-   
-    padding: 13px !important;}
-    .textContant {
-     
-      font-size: 90% !important;}
+    padding: 13px !important;
+  }
+  .textContant {
+    font-size: 90% !important;
+  }
 }
 body {
   font-family: "Cairo", sans-serif;
@@ -212,11 +213,7 @@ body {
 .slide {
   width: 100%;
   /* height: 99px; */
-  background-image: linear-gradient(
-    to top,
-    var(--text-color-day),
-    transparent
-  );
+  background-image: linear-gradient(to top, var(--text-color-day), transparent);
 
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -620,7 +617,9 @@ body {
 .footer-links a:hover {
   color: #ffc107;
 }
-
+.checked {
+  color: orange;
+}
 .footer p {
   margin: 0;
   font-size: 16px;
@@ -632,19 +631,34 @@ body {
   display: none;
 }
 @media (max-width: 768px) {
+  .col-md-4:nth-child(2) {
+    display: none;
+  }
   /* Hide the mainNavbar when the screen is less than 768px */
   .mainNavbar,
   .logo {
     display: none;
   }
- 
-    .main2{
-      gap: 0px !important;
-      padding: 5px !important;
-    }
-    .dark .food-sub h2{
-      font-size: 15px !important;
-    }
+  .hero-image2 {
+    height: 244px !important;
+  
+    background-position: -271px -225px !important;
+  }
+  .main2 {
+    gap: 5px !important;
+    padding: 5px !important;
+    margin: 14px;
+  }
+  .dark .food-sub h2 {
+    font-size: 10px !important;
+    
+  }
+  .food-sub{
+    padding: 0 !important;
+  }
+  .col-md-4 h3, p{
+    font-size: small !important;
+  }
   /* Show the nav__menu when the screen is less than 768px */
   #nav__menu {
     display: block;
@@ -662,15 +676,13 @@ body {
   .textContant p {
     display: none;
   }
-
-  .original-site {
-    margin-bottom: 76px;
-    bottom: 0;
-    position: relative;
+  .footer-content{
+    justify-content: space-between !important;
   }
+  
   .carousel-container {
     margin: 10px;
-}
+  }
   /* You can also add additional styles for the nav__menu here */
   .hero-text h1 {
     font-size: 25px !important;
@@ -704,7 +716,10 @@ body {
   }
 }
 .hero-image {
-  background-image: linear-gradient( rgba(37, 36, 36, 0.5), rgba(37, 36, 36, 0.5)),
+  background-image: linear-gradient(
+      rgba(37, 36, 36, 0.5),
+      rgba(37, 36, 36, 0.5)
+    ),
     url("./pic/MapChart_Map.png");
   height: 357px;
   position: relative;
@@ -715,8 +730,23 @@ body {
   border-radius: 10px;
   border: solid;
 }
-.dark .hero-image{
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+.hero-image2 {
+  background-image: linear-gradient(
+      rgba(37, 36, 36, 0.5),
+      rgba(37, 36, 36, 0.5)
+    ),
+    url("./pic/cover_image1_0.jpg");
+  height: 357px;
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  background-position: -9px -25px;
+  background-size: 1525px;
+  border-radius: 10px;
+  border: solid;
+}
+.dark .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./pic/MapChart_Map.png");
 }
 .hero-text {
@@ -732,12 +762,49 @@ body {
   align-content: center;
   justify-content: center;
   align-items: stretch;
+  width: 75%;
+}
+.hero-clup {
+  
+  margin: 10px;
+  padding: 10px;
+  background-position: -9px -25px;
+  background-size: 1525px;
+  
+  display: flex;
+  justify-content: center;
+}
+.hero-clup img {
+  width: 50%;
+  height: 75%;
+  border-radius: 10px;
+}
+.main-hero{
+  padding: 10px;
+    margin: 10px;
+    border: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+}
+.contant-hero {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contant-hero img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
 }
 .hero-text p {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   border-radius: 10px;
   width: 50%;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .hero-text h1 {
   border-bottom: 3px solid #661919;
@@ -789,7 +856,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.card:hover{
+.card:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
@@ -798,7 +865,7 @@ body {
   padding: 1rem;
   color: var(--text-color-day);
   text-align: center;
-  
+
   font-size: 10px;
 }
 
@@ -869,11 +936,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  background-image: linear-gradient(
-    to top,
-    var(--new-color),
-    transparent
-  );
+  background-image: linear-gradient(to top, var(--new-color), transparent);
   color: var(--text-color-day);
 }
 .dark .card22 {
@@ -910,10 +973,9 @@ body {
 .show {
   display: flex;
 }
-.containerClub{
+.containerClub {
   display: flex;
   justify-content: center;
-
 }
 /* Style the dropdown */
 .categoryDropdown {
@@ -924,7 +986,6 @@ body {
   cursor: pointer;
   width: 243px;
   text-align: center;
-
 }
 
 .categoryDropdown:hover {
@@ -935,19 +996,25 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
-    height: 261px;
+  background-image: linear-gradient(
+    to top,
+    var(--secondary-color-day),
+    transparent
+  );
+  height: 261px;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
   margin: 10px;
-  
 }
-.dark .newsletter-form{
-  background-image: linear-gradient( to top, var(--secondary-color-day), transparent );
-
+.dark .newsletter-form {
+  background-image: linear-gradient(
+    to top,
+    var(--secondary-color-day),
+    transparent
+  );
 }
 /* CSS styles for form elements */
 .newsletter-form label,
@@ -962,13 +1029,11 @@ body {
 }
 
 .newsletter-form input[type="email"] {
- 
   width: 286px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
   text-align: center;
-
 }
 
 .newsletter-form button[type="submit"] {
@@ -1000,7 +1065,7 @@ body {
   height: 100px;
   text-align: center;
   align-items: center;
-  
+
   justify-content: center;
   color: var(--text-color-day);
 }
@@ -1014,10 +1079,10 @@ body {
 .dark .breakfast-item {
   background-color: var(--secondary-color-day);
 }
-.dark .breakfast-item h2{
+.dark .breakfast-item h2 {
   color: var(--text-color-day);
 }
-.lunch-item{
+.lunch-item {
   margin-bottom: 20px;
   padding: 30px;
   border: 1px solid #ddd;
@@ -1027,10 +1092,10 @@ body {
 .dark .lunch-item {
   background-color: var(--secondary-color-day);
 }
-.dark .lunch-item h2{
+.dark .lunch-item h2 {
   color: var(--text-color-day);
 }
-.dinner-item{
+.dinner-item {
   margin-bottom: 20px;
   padding: 30px;
   border: 1px solid #ddd;
@@ -1040,39 +1105,96 @@ body {
 .dark .dinner-item {
   background-color: var(--secondary-color-day);
 }
-.dark .dinner-item h2{
+.dark .dinner-item h2 {
   color: var(--text-color-day);
 }
-.food-sub{
-  
+.food-sub {
+  gap: 10px;
   padding: 30px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff;
+  background-image: linear-gradient(to top, var(--new-color), transparent);
   display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column-reverse;
 }
 .food-sub img {
   max-width: 100%;
-  height: auto;
+ 
   border-radius: 10px;
 }
 .dark .food-sub {
   background-color: var(--secondary-color-day);
 }
-.dark .food-sub h2{
+.dark .food-sub h2 {
   color: var(--text-color-day);
 }
-.food-sub img:hover{
+.food-sub h2 {
+  font-size: 15px;
+}
+.food-sub img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-.dark .card-dark{
+.dark .card-dark {
   background-color: var(--secondary-color-day);
   color: var(--text-color-day);
 }
-.dark .gap-5 a{
+.dark .gap-5 a {
   color: aquamarine;
+}
+.dark .products-preview .preview {
+  background-color: var(--secondary-color-day);
+}
+.dark .products-preview .preview h3 {
+  color: var(--text-color-day);
+}
+.dark .products-preview .preview .fa-times,
+.dark .products-preview .preview p {
+  color: var(--text-color-night);
+}
+.dark .products-preview .preview .buttons a {
+  color: #ffffff;
+  border: 0.1rem solid #b4a8a8;
+}
+.details a {
+  color: var(--dropdown-bg-color-day);
+}
+.dark .details a {
+  color: var(--dropdown-bg-color-day);
+}
+.gallery {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-link {
+  padding: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.nav-link.active {
+  background-color: #ccc;
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
 }

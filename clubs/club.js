@@ -32,3 +32,5 @@ function w3RemoveClass(element, name) {
 
 // Set the default value to "all" in the dropdown
 document.getElementById("categoryDropdown").value = "all";
+///////////////
+
